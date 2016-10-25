@@ -7,6 +7,6 @@ class controller {
 
 export default {
   template: require('./about.html'),
-  controllerAs: 'AboutCtrl',
+  controllerAs: 'aboutCtrl',
   controller
 }
