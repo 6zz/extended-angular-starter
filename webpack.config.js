@@ -109,7 +109,7 @@ module.exports = function makeWebpackConfig() {
       //
       // Reference: https://github.com/webpack/style-loader
       // Use style-loader in development.
-      loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!sass!postcss')
+      loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!sass!sass-resources!postcss')
     }, {
       // ASSET LOADER
       // Reference: https://github.com/webpack/file-loader
@@ -142,6 +142,10 @@ module.exports = function makeWebpackConfig() {
       loader: 'raw'
     }]
   };
+
+  config.sassResources = [
+    "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss"
+  ];
 
   // ISPARTA LOADER
   // Reference: https://github.com/ColCh/isparta-instrumenter-loader
