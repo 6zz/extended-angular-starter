@@ -1,0 +1,32 @@
+contact.ng-scope {
+  display: block;
+  margin: 20px;
+
+  label {
+    display: table;
+    width: 100%;
+  }
+  input {
+    border-style: solid;
+  }
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.ng-invalid {
+  border-color: $alert-danger-border;
+  outline-color: $alert-danger-border;
+}
+
+.ng-valid {
+  border-color: $alert-success-border;
+  outline-color: $alert-success-border;
+}

@@ -1,0 +1,18 @@
+<h1>{{ contactCtrl.title }}</h1>
+<label>Email:<br>
+  <input
+    type='email'
+    ng-model='contactCtrl.email'
+    ng-required='required'
+    ng-trim=true
+  >
+</label><br>
+<label>Message:<br>
+  <textarea
+    ng-model='contactCtrl.text'
+    ng-required='required'
+    ng-minlength=10
+    ng-maxlength=300
+    ng-trim=true
+  >
+</label>

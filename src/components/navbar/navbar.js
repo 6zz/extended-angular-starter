@@ -12,7 +12,7 @@ class NavBarController {
       href: 'about',
       label: 'About'
     }, {
-      href: '#',
+      href: 'contact',
       label: 'Contact'
     }];
 
