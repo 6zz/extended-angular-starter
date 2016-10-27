@@ -1,18 +1,27 @@
-<h1>{{ contactCtrl.title }}</h1>
-<label>Email:<br>
-  <input
-    type='email'
-    ng-model='contactCtrl.email'
-    ng-required='required'
-    ng-trim=true
-  >
-</label><br>
-<label>Message:<br>
-  <textarea
-    ng-model='contactCtrl.text'
-    ng-required='required'
-    ng-minlength=10
-    ng-maxlength=300
-    ng-trim=true
-  >
-</label>
+<h1 class='title' ng-bind='::$ctrl.title'></h1>
+<form name='$ctrl.contactForm' ng-submit='$ctrl.handleSubmit()'>
+  <label>Email:<br>
+    <input
+      type='email'
+      required
+      ng-model='$ctrl.email'
+      ng-trim=true
+    >
+  </label><br>
+  <label>Message:<br>
+    <textarea
+      name='text'
+      ng-model='$ctrl.text'
+      required
+      ng-class='$ctrl.textClasses'
+      ng-trim=true
+      ng-change='$ctrl.updateTextCount()'
+    ></textarea>
+  </label>
+  <div ng-class='$ctrl.textClasses' class='text-tip text-info'>
+    <span>10 to 300 charactors</span>
+    <span>{{ $ctrl.availableTextCount }}</span>
+  </div>
+  <button class='btn-primary' type='submit'>Send</button>
+</form>
+<samp>message: {{ $ctrl.contactForm.text }}</samp>

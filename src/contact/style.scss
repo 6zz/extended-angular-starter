@@ -5,10 +5,22 @@ contact.ng-scope {
   label {
     display: table;
     width: 100%;
+    margin: 0;
   }
+
   input {
     border-style: solid;
   }
+
+  button {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  samp {
+    color: rgb(204, 204, 204);
+  }
+
 }
 
 input,
@@ -19,6 +31,25 @@ textarea {
 
 textarea {
   min-height: 100px;
+}
+.title {
+  text-transform: capitalize;
+}
+
+.text-tip {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  font-size: small;
+  line-height: 1;
+
+  &.ng-valid {
+    color: $alert-success-text;
+  }
+
+  &.ng-invalid {
+    color: $alert-danger-text;
+  }
 }
 
 .ng-invalid {
